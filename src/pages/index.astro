@@ -1,0 +1,12 @@
+---
+import Rootlayout from "~/layouts/root-layout.astro";
+import ThemeToggle from "~/components/svelte/theme-toggle.svelte";
+import ThemeMenu from "~/components/vue/theme-menu.vue";
+---
+
+<Rootlayout title="Home">
+  <section class="min-h-screen flex flex-col justify-center items-center">
+    <ThemeToggle client:only />
+    <ThemeMenu client:only />
+  </section>
+</Rootlayout>
