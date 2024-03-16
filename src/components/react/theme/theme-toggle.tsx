@@ -1,10 +1,8 @@
 import { useEffect } from "react";
 import { Sun, Moon } from "lucide-react";
 import { useStore } from "@nanostores/react";
-
-import { Button } from "~/components/react/ui/button";
-
 import { theme, useTheme, toggleTheme } from "~/stores/theme-store";
+import { Button } from "~/components/react/ui/button";
 
 export default function ThemeToggle() {
   const $theme = useStore(theme);

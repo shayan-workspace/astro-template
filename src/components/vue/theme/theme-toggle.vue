@@ -2,11 +2,8 @@
   import { effect } from "vue";
   import { Sun, Moon } from "lucide-vue-next";
   import { useStore } from "@nanostores/vue";
-
-  import { Button } from "~/components/vue/ui/button";
-
-
   import { theme, useTheme, toggleTheme } from "~/stores/theme-store";
+  import { Button } from "~/components/vue/ui/button";
 
   const $theme = useStore(theme)
 
