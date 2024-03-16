@@ -1,12 +1,12 @@
 ---
 import Rootlayout from "~/layouts/root-layout.astro";
-import ThemeToggle from "@/components/vue/theme/theme-toggle.vue";
-import ThemeMenu from "@/components/vue/theme/theme-menu.vue";
+import ThemeToggle from "~/components/react/theme/theme-toggle.tsx";
+import ThemeMenu from "~/components/react/theme/theme-menu.tsx";
 ---
 
 <Rootlayout title="Home">
   <section class="min-h-screen flex flex-col justify-center items-center">
-    <ThemeToggle client:only />
-    <ThemeMenu client:only />
+    <ThemeToggle client:only="react" />
+    <ThemeMenu client:only="react" />
   </section>
 </Rootlayout>
