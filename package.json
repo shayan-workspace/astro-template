@@ -9,9 +9,9 @@
     "dev": "astro dev",
     "preview": "astro preview",
     "start": "astro dev",
-    "uir": "echo '{\"aliases\":{\"components\":\"~/components/react\",\"utils\":\"~/lib/utils\"},\"style\":\"default\",\"tailwind\":{\"config\":\"tailwind.config.mjs\",\"css\":\"src/styles/globals.css\",\"baseColor\":\"slate\",\"cssVariables\":true},\"tsx\":true,\"rsc\":true}' > components.json && pnpx shadcn-ui add -yo",
-    "uis": "echo '{\"aliases\":{\"components\":\"~/components/svelte\",\"utils\":\"~/lib/utils\"},\"style\":\"default\",\"tailwind\":{\"config\":\"tailwind.config.mjs\",\"css\":\"src/styles/globals.css\",\"baseColor\":\"slate\",\"cssVariables\":true},\"typescript\":true}' > components.json && pnpx shadcn-svelte add -yo",
-    "uiv": "echo '{\"aliases\":{\"components\":\"~/components/vue\",\"utils\":\"~/lib/utils\"},\"style\":\"default\",\"tailwind\":{\"config\":\"tailwind.config.mjs\",\"css\":\"src/styles/globals.css\",\"baseColor\":\"slate\",\"cssVariables\":true},\"typescript\":true}' > components.json && pnpx shadcn-vue add -yo"
+    "rui": "echo '{\"aliases\":{\"components\":\"~/components/react\",\"utils\":\"~/lib/utils\"},\"style\":\"default\",\"tailwind\":{\"config\":\"tailwind.config.mjs\",\"css\":\"src/styles/globals.css\",\"baseColor\":\"slate\",\"cssVariables\":true},\"tsx\":true,\"rsc\":true}' > components.json && pnpx shadcn-ui add -yo",
+    "sui": "echo '{\"aliases\":{\"components\":\"~/components/svelte\",\"utils\":\"~/lib/utils\"},\"style\":\"default\",\"tailwind\":{\"config\":\"tailwind.config.mjs\",\"css\":\"src/styles/globals.css\",\"baseColor\":\"slate\",\"cssVariables\":true},\"typescript\":true}' > components.json && pnpx shadcn-svelte add -yo",
+    "vui": "echo '{\"aliases\":{\"components\":\"~/components/vue\",\"utils\":\"~/lib/utils\"},\"style\":\"default\",\"tailwind\":{\"config\":\"tailwind.config.mjs\",\"css\":\"src/styles/globals.css\",\"baseColor\":\"slate\",\"cssVariables\":true},\"typescript\":true}' > components.json && pnpx shadcn-vue add -yo"
   },
   "dependencies": {
     "@astrojs/check": "^0.5.8",
