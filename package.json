@@ -1,6 +1,6 @@
 {
   "name": "astro",
-  "description": "Astro + React + Svelte + Vue",
+  "description": "Astro + React + Svelte + Vue + Nanostores",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
