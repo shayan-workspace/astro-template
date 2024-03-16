@@ -9,7 +9,7 @@ export default function ThemeToggle() {
 
   useEffect(() => {
     useTheme($theme);
-  });
+  }, [$theme]);
 
   return (
     <Button onClick={toggleTheme} variant="outline" size="icon">

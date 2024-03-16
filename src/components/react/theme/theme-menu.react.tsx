@@ -15,7 +15,7 @@ export default function ThemeToggle() {
 
   useEffect(() => {
     useTheme($theme);
-  });
+  }, [$theme]);
 
   return (
     <DropdownMenu>
