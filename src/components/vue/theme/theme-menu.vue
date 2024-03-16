@@ -3,18 +3,16 @@
   import { useStore } from "@nanostores/vue";
   import { Sun, Moon } from "lucide-vue-next";
 
-
   import { Button } from "~/components/vue/ui/button";
   import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "~/components/vue/ui/dropdown-menu";
 
-  import { theme, useTheme, setTheme, toggleTheme } from "~/stores/theme-store"
+  import { theme, useTheme, setTheme } from "~/stores/theme-store"
 
   const $theme = useStore(theme)
 
   effect(() => {
     useTheme($theme.value)
   })
-
 </script>
 
 <template>
