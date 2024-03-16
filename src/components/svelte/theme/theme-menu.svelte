@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Sun, Moon } from "lucide-svelte";
-
+  import { theme, useTheme, setTheme } from "~/stores/theme-store";
   import { Button } from "~/components/svelte/ui/button";
   import {
     DropdownMenu,
@@ -8,8 +8,6 @@
     DropdownMenuContent,
     DropdownMenuItem,
   } from "~/components/svelte/ui/dropdown-menu";
-
-  import { theme, useTheme, setTheme } from "~/stores/theme-store";
 
   $effect(() => {
     useTheme($theme);

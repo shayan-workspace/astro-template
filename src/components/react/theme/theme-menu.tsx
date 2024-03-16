@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Sun, Moon } from "lucide-react";
 import { useStore } from "@nanostores/react";
-
+import { theme, useTheme, setTheme } from "~/stores/theme-store";
 import { Button } from "~/components/react/ui/button";
 import {
   DropdownMenu,
@@ -9,8 +9,6 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
 } from "~/components/react/ui/dropdown-menu";
-
-import { theme, useTheme, setTheme } from "~/stores/theme-store";
 
 export default function ThemeToggle() {
   const $theme = useStore(theme);
