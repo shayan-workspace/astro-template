@@ -1,12 +1,29 @@
 ---
 import Rootlayout from "~/layouts/root-layout.astro";
-import ThemeToggle from "~/components/react/theme/theme-toggle.tsx";
-import ThemeMenu from "~/components/react/theme/theme-menu.tsx";
+import ThemeMenuReact from "~/components/react/theme/theme-menu.tsx";
+import ThemeToggleReact from "~/components/react/theme/theme-toggle.tsx";
+import ThemeMenuSvelte from "~/components/svelte/theme/theme-menu.svelte";
+import ThemeToggleSvelte from "~/components/svelte/theme/theme-toggle.svelte";
+import ThemeMenuVue from "~/components/vue/theme/theme-menu.vue";
+import ThemeToggleVue from "~/components/vue/theme/theme-toggle.vue";
 ---
 
 <Rootlayout title="Home">
-  <section class="min-h-screen flex flex-col justify-center items-center">
-    <ThemeToggle client:only="react" />
-    <ThemeMenu client:only="react" />
+  <section class="min-h-screen flex flex-col gap-4 justify-center items-center">
+    <div>
+      <h3 class="text-center">React</h3>
+      <ThemeMenuReact client:only="react" />
+      <ThemeToggleReact client:only="react" />
+    </div>
+    <div>
+      <h3 class="text-center">Svelte</h3>
+      <ThemeMenuSvelte client:only="svelte" />
+      <ThemeToggleSvelte client:only="svelte" />
+    </div>
+    <div>
+      <h3 class="text-center">Vue</h3>
+      <ThemeMenuVue client:only="vue" />
+      <ThemeToggleVue client:only="vue" />
+    </div>
   </section>
 </Rootlayout>

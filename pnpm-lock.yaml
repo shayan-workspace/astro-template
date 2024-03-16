@@ -20,6 +20,9 @@ dependencies:
   '@astrojs/vue':
     specifier: ^4.0.8
     version: 4.0.8(@babel/core@7.24.0)(astro@4.5.2)(vite@5.1.6)(vue@3.4.21)
+  '@gsap/react':
+    specifier: ^2.1.0
+    version: 2.1.0
   '@nanostores/persistent':
     specifier: ^0.10.1
     version: 0.10.1(nanostores@0.10.0)
@@ -878,6 +881,13 @@ packages:
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
+    dev: false
+
+  /@gsap/react@2.1.0:
+    resolution: {integrity: sha512-pwdFXvOM5IsRZXpWTKkQoEjb3/iUjDCU1BCJDlE6pHgVjG+7Ep/7+sszUgqVZ2Jc0mR8gnhtDWyx5cQAT4kwQw==}
+    dependencies:
+      gsap: 3.12.5
+      react: 18.2.0
     dev: false
 
   /@internationalized/date@3.5.2:
