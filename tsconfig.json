@@ -1,12 +1,8 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "baseUrl": "/home/shayan/Projects/portfolio",
-    "paths": {
-      "@/*": ["src/*"],
-      "~/*": ["src/*"],
-      "$/*": ["src/*"]
-    },
+    "baseUrl": ".",
+    "paths": { "~/*": ["src/*"] },
 
     "jsx": "react-jsx",
     "jsxImportSource": "react"
