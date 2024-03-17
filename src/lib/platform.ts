@@ -1,2 +1,2 @@
-export const isServer = import.meta.env.SSR;
-export const isClient = !isServer;
+export const isClient = globalThis.window !== undefined;
+export const isServer = globalThis.window === undefined;

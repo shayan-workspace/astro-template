@@ -2,16 +2,21 @@
   import { Sun, Moon } from "lucide-svelte";
   import { toggleTheme } from "~/stores/theme-store";
   import { Button } from "~/components/svelte/ui/button";
+  import { useRef, useStore } from "~/lib/use.svelte";
+  import { themeStore } from "~/stores/theme-store";
 
-  import { theme as store } from "~/stores/theme-store";
+  const theme = useStore(themeStore);
+  const count = useRef(0);
 
-  import use from "~/stores/use.svelte";
-
-  const theme = use(store);
+  function onClick() {
+    count.value++;
+    toggleTheme();
+  }
 </script>
 
 {theme.value}
-<Button on:click={toggleTheme} variant="outline" size="icon">
+{count.value}
+<Button on:click={onClick} variant="outline" size="icon">
   <Sun
     class="h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
   />
