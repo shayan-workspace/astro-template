@@ -5,30 +5,30 @@ type ResolvedTheme = "light" | "dark";
 
 type Theme = ResolvedTheme | "system";
 
-export const themeStore = persistentAtom<Theme>("theme", "system");
+export const theme = persistentAtom<Theme>("theme", "system");
 
-export const resolvedThemeStore = persistentAtom<ResolvedTheme>(
+export const resolvedTheme = persistentAtom<ResolvedTheme>(
   "resolved-theme",
   "light"
 );
 
-themeStore.subscribe((newTheme) => {
+theme.subscribe((newTheme) => {
   if (isClient) {
     if (newTheme === "system") {
       if (matchMedia("(prefers-color-scheme: dark)").matches) {
-        resolvedThemeStore.set("dark");
+        resolvedTheme.set("dark");
       }
 
       if (matchMedia("(prefers-color-scheme: light)").matches) {
-        resolvedThemeStore.set("light");
+        resolvedTheme.set("light");
       }
     } else {
-      resolvedThemeStore.set(newTheme);
+      resolvedTheme.set(newTheme);
     }
   }
 });
 
-resolvedThemeStore.subscribe((newResolvedTheme) => {
+resolvedTheme.subscribe((newResolvedTheme) => {
   if (isClient) {
     if (newResolvedTheme === "dark") {
       document.documentElement.classList.add("dark");
@@ -43,17 +43,17 @@ resolvedThemeStore.subscribe((newResolvedTheme) => {
 });
 
 export function toggleTheme() {
-  if (resolvedThemeStore.get() === "dark") {
-    themeStore.set("light");
+  if (resolvedTheme.get() === "dark") {
+    theme.set("light");
     return;
   }
 
-  if (resolvedThemeStore.get() === "light") {
-    themeStore.set("dark");
+  if (resolvedTheme.get() === "light") {
+    theme.set("dark");
     return;
   }
 }
 
 export function setTheme(newTheme: Theme) {
-  themeStore.set(newTheme);
+  theme.set(newTheme);
 }
