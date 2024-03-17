@@ -12,18 +12,18 @@ import ThemeToggleVue from "~/components/vue/theme/theme-toggle.vue";
   <section class="min-h-screen flex flex-col gap-4 justify-center items-center">
     <div>
       <h3 class="text-center">React</h3>
-      <ThemeMenuReact client:only="react" />
-      <ThemeToggleReact client:only="react" />
+      <ThemeMenuReact client:load />
+      <ThemeToggleReact client:load />
     </div>
     <div>
       <h3 class="text-center">Svelte</h3>
-      <ThemeMenuSvelte client:only="svelte" />
-      <ThemeToggleSvelte client:only="svelte" />
+      <ThemeMenuSvelte client:load />
+      <ThemeToggleSvelte client:load />
     </div>
     <div>
       <h3 class="text-center">Vue</h3>
-      <ThemeMenuVue client:only="vue" />
-      <ThemeToggleVue client:only="vue" />
+      <ThemeMenuVue client:load />
+      <ThemeToggleVue client:load />
     </div>
   </section>
 </Rootlayout>

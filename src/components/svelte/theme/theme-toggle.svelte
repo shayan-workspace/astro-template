@@ -1,11 +1,7 @@
 <script lang="ts">
   import { Sun, Moon } from "lucide-svelte";
-  import { theme, useTheme, toggleTheme } from "~/stores/theme-store";
+  import { toggleTheme } from "~/stores/theme-store";
   import { Button } from "~/components/svelte/ui/button";
-
-  $effect(() => {
-    useTheme($theme);
-  });
 </script>
 
 <Button on:click={toggleTheme} variant="outline" size="icon">

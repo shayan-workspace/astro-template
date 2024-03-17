@@ -1,15 +1,7 @@
 <script setup lang="ts">
-  import { effect } from "vue";
   import { Sun, Moon } from "lucide-vue-next";
-  import { useStore } from "@nanostores/vue";
-  import { theme, useTheme, toggleTheme } from "~/stores/theme-store";
+  import { toggleTheme } from "~/stores/theme-store";
   import { Button } from "~/components/vue/ui/button";
-
-  const $theme = useStore(theme)
-
-  effect(() => {
-    useTheme($theme.value);
-  });
 </script>
 
 <template>
