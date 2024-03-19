@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { Sun, Moon } from "lucide-vue-next";
-  import { setTheme } from "~/stores/theme"
+  import { setTheme } from "~/stores/theme-store"
   import { Button } from "~/components/vue/ui/button";
   import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "~/components/vue/ui/dropdown-menu";
 </script>

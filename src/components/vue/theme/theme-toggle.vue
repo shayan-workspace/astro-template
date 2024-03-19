@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { Sun, Moon } from "lucide-vue-next";
-  import { toggleTheme } from "~/stores/theme";
+  import { toggleTheme } from "~/stores/theme-store";
   import { Button } from "~/components/vue/ui/button";
 </script>
 
