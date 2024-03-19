@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Sun, Moon } from "lucide-svelte";
-  import { setTheme } from "~/stores/theme-store";
+  import { setTheme } from "~/stores/theme";
   import { Button } from "~/components/svelte/ui/button";
   import {
     DropdownMenu,
