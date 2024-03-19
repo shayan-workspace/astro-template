@@ -20,6 +20,12 @@ dependencies:
   '@nanostores/persistent':
     specifier: ^0.10.1
     version: 0.10.1(nanostores@0.10.0)
+  '@usesvelte/core':
+    specifier: npm:@jsr/usesvelte__core@^1.5.0
+    version: /@jsr/usesvelte__core@1.5.0
+  '@usevue/core':
+    specifier: npm:@jsr/usevue__core@^1.5.0
+    version: /@jsr/usevue__core@1.5.0(typescript@5.4.2)
   astro:
     specifier: ^4.5.5
     version: 4.5.5(typescript@5.4.2)
@@ -842,6 +848,22 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.4.15
+    dev: false
+
+  /@jsr/usesvelte__core@1.5.0:
+    resolution: {integrity: sha512-L6TpMXRtAUZd3JORvGvHyuwnMjpfX643ACwZL6t4h+kTeZAWqq5AP0619/1elPOYsbgMIMzFr8h4E99n8xyRag==, tarball: https://npm.jsr.io/~/7/@jsr/usesvelte__core/1.5.0.tgz}
+    dependencies:
+      nanostores: 0.10.0
+      svelte: 5.0.0-next.80
+    dev: false
+
+  /@jsr/usevue__core@1.5.0(typescript@5.4.2):
+    resolution: {integrity: sha512-yCGoD9Fnpr0czmUGxeSMVSDrI1SKJv8TfpZhGLLdnPnXuVP0vK6VAMOaL+fCuV+xq75ZSb9RKuzNsqs9ctnj6g==, tarball: https://npm.jsr.io/~/7/@jsr/usevue__core/1.5.0.tgz}
+    dependencies:
+      nanostores: 0.10.0
+      vue: 3.4.21(typescript@5.4.2)
+    transitivePeerDependencies:
+      - typescript
     dev: false
 
   /@melt-ui/svelte@0.76.0(svelte@5.0.0-next.76):
@@ -4081,6 +4103,25 @@ packages:
 
   /svelte@5.0.0-next.76:
     resolution: {integrity: sha512-KGtniBS5VrBG/F0HejqVMeJTtVuGTRnIQ2m+slPd4GQD2zcHZNDv0y9gZjRdImEAKQopu5SmsY4M3giqONpYIQ==}
+    engines: {node: '>=18'}
+    dependencies:
+      '@ampproject/remapping': 2.3.0
+      '@jridgewell/sourcemap-codec': 1.4.15
+      '@types/estree': 1.0.5
+      acorn: 8.11.3
+      acorn-typescript: 1.4.13(acorn@8.11.3)
+      aria-query: 5.3.0
+      axobject-query: 4.0.0
+      esm-env: 1.0.0
+      esrap: 1.2.1
+      is-reference: 3.0.2
+      locate-character: 3.0.0
+      magic-string: 0.30.8
+      zimmerframe: 1.1.2
+    dev: false
+
+  /svelte@5.0.0-next.80:
+    resolution: {integrity: sha512-hiei7UfWoNa6P0yvNoUWqptSh8Tnn2V3dN+w6s32jSqpqzTtNG2tn+xbxdOOBJ5wYc3gYKYbA3+rK1Q643iCEw==}
     engines: {node: '>=18'}
     dependencies:
       '@ampproject/remapping': 2.3.0
