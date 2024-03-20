@@ -1,7 +1,23 @@
 <script setup lang="ts">
+  import { useStore } from "@usevue/core"
   import { Sun, Moon } from "lucide-vue-next";
-  import { toggleTheme } from "~/stores/theme-store";
+
   import { Button } from "~/components/vue/ui/button";
+
+  import { resolvedThemeStore } from "~/stores/theme-store"
+
+  const theme = useStore(resolvedThemeStore)
+
+  function toggleTheme() {
+    switch (theme.value) {
+      case "dark":
+        theme.value = "light";
+        break;
+      case "light":
+        theme.value = "dark";
+        break;
+    }
+  }
 </script>
 
 <template>

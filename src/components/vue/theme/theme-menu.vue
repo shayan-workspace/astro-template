@@ -1,8 +1,13 @@
 <script setup lang="ts">
+  import { useStore } from "@usevue/core"
   import { Sun, Moon } from "lucide-vue-next";
-  import { setTheme } from "~/stores/theme-store"
+
   import { Button } from "~/components/vue/ui/button";
   import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "~/components/vue/ui/dropdown-menu";
+
+  import { themeStore } from "~/stores/theme-store"
+
+  const theme = useStore(themeStore)
 </script>
 
 <template>
@@ -15,9 +20,9 @@
       </Button>
     </DropdownMenuTrigger>
     <DropdownMenuContent align="end">
-      <DropdownMenuItem @click="() => setTheme('light')">Light</DropdownMenuItem>
-      <DropdownMenuItem @click="() => setTheme('dark')">Dark</DropdownMenuItem>
-      <DropdownMenuItem @click="() => setTheme('system')">System</DropdownMenuItem>
+      <DropdownMenuItem @click="() => { theme.value = 'light' }">Light</DropdownMenuItem>
+      <DropdownMenuItem @click="() => { theme.value = 'dark' }">Dark</DropdownMenuItem>
+      <DropdownMenuItem @click="() => { theme.value = 'system' }">System</DropdownMenuItem>
     </DropdownMenuContent>
   </DropdownMenu>
 </template>

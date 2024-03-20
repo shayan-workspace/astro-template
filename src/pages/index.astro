@@ -12,13 +12,13 @@ import ThemeToggleVue from "~/components/vue/theme/theme-toggle.vue";
   >
     <article>
       <h3>Svelte</h3>
-      <ThemeMenuSvelte client:only />
-      <ThemeToggleSvelte client:only />
+      <ThemeMenuSvelte client:load />
+      <ThemeToggleSvelte client:load />
     </article>
     <article>
       <h3>Vue</h3>
-      <ThemeMenuVue client:only />
-      <ThemeToggleVue client:only />
+      <ThemeMenuVue client:load />
+      <ThemeToggleVue client:load />
     </article>
   </section>
 </Rootlayout>

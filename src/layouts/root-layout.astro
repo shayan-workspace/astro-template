@@ -10,6 +10,28 @@ interface Props {
 const props = Astro.props;
 ---
 
+<script is:inline>
+  function setupTheme() {
+    const theme = localStorage.getItem("theme");
+
+    if (theme === "system") {
+      if (matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.documentElement.classList.add("dark");
+      }
+
+      if (matchMedia("(prefers-color-scheme: light)").matches) {
+        document.documentElement.classList.add("light");
+      }
+    } else {
+      document.documentElement.classList.add(theme);
+    }
+  }
+
+  setupTheme();
+
+  document.addEventListener("astro:after-swap", setupTheme);
+</script>
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />

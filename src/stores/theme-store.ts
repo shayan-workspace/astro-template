@@ -40,19 +40,3 @@ resolvedThemeStore.subscribe((newResolvedTheme) => {
     }
   }
 });
-
-export function toggleTheme() {
-  if (resolvedThemeStore.get() === "dark") {
-    themeStore.set("light");
-    return;
-  }
-
-  if (resolvedThemeStore.get() === "light") {
-    themeStore.set("dark");
-    return;
-  }
-}
-
-export function setTheme(newTheme: Theme) {
-  themeStore.set(newTheme);
-}
