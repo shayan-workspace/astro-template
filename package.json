@@ -8,6 +8,7 @@
     "check": "astro check",
     "build": "astro build",
     "preview": "astro preview",
+    "format": "prettier --write .",
     "svelteui": "echo '{\"aliases\":{\"components\":\"~/components/svelte\",\"utils\":\"~/lib/utils\"},\"style\":\"default\",\"tailwind\":{\"config\":\"tailwind.config.mjs\",\"css\":\"src/styles/globals.css\",\"baseColor\":\"slate\",\"cssVariables\":true},\"typescript\":true}' > components.json && pnpx shadcn-svelte add -yo",
     "vueui": "echo '{\"aliases\":{\"components\":\"~/components/vue\",\"utils\":\"~/lib/utils\"},\"style\":\"default\",\"tailwind\":{\"config\":\"tailwind.config.mjs\",\"css\":\"src/styles/globals.css\",\"baseColor\":\"slate\",\"cssVariables\":true},\"typescript\":true}' > components.json && pnpx shadcn-vue add -yo"
   },
@@ -34,5 +35,10 @@
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.4.2",
     "vue": "3.4.0-alpha.4"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.13.0",
+    "prettier-plugin-svelte": "^3.2.2"
   }
 }

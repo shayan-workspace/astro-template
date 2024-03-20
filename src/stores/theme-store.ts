@@ -8,7 +8,7 @@ export const themeStore = persistentAtom<Theme>("theme", "system");
 
 export const resolvedThemeStore = persistentAtom<ResolvedTheme>(
   "resolved-theme",
-  "light"
+  "light",
 );
 
 themeStore.subscribe((newTheme) => {
