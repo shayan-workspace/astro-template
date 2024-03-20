@@ -21,11 +21,11 @@ dependencies:
     specifier: ^0.10.1
     version: 0.10.1(nanostores@0.10.0)
   '@usesvelte/core':
-    specifier: npm:@jsr/usesvelte__core@^2.6.0
-    version: /@jsr/usesvelte__core@2.6.0
+    specifier: npm:@jsr/usesvelte__core@^0.1.0
+    version: /@jsr/usesvelte__core@0.1.0
   '@usevue/core':
-    specifier: npm:@jsr/usevue__core@^2.6.0
-    version: /@jsr/usevue__core@2.6.0(typescript@5.4.2)
+    specifier: npm:@jsr/usevue__core@^0.1.0
+    version: /@jsr/usevue__core@0.1.0(typescript@5.4.2)
   astro:
     specifier: ^4.5.6
     version: 4.5.6(typescript@5.4.2)
@@ -851,14 +851,14 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: false
 
-  /@jsr/usesvelte__core@2.6.0:
-    resolution: {integrity: sha512-Dw0Iovy/WYX8OLCEmxNzPk4scsSDUwRWQQLBCpRSo2iKkA9bHbmgi1hqfXAiJ5WUCHxWEXw5M8FhGjybq4MNSw==, tarball: https://npm.jsr.io/~/7/@jsr/usesvelte__core/2.6.0.tgz}
+  /@jsr/usesvelte__core@0.1.0:
+    resolution: {integrity: sha512-/bwvuPK7i0/+7nD7EiPJJiOhvnZmT+yz272+CR0MH228qoGNeCFbJumxSp8DLIWXjVu6L3HunQr0CL/wXWlwZw==, tarball: https://npm.jsr.io/~/7/@jsr/usesvelte__core/0.1.0.tgz}
     dependencies:
       svelte: 5.0.0-next.80
     dev: false
 
-  /@jsr/usevue__core@2.6.0(typescript@5.4.2):
-    resolution: {integrity: sha512-kOgGvR408zh/Uk5xap7Id50UuFKB3P7HxzctYuHO0gmtPHpp3lB8mKRxdBB8OB2c8wsKL4EwtFc3FJT7FcG0iQ==, tarball: https://npm.jsr.io/~/7/@jsr/usevue__core/2.6.0.tgz}
+  /@jsr/usevue__core@0.1.0(typescript@5.4.2):
+    resolution: {integrity: sha512-WhvLY7FAIFnvcOXyB+XQzlj+4OY+1cHqN+XaDqNDZNg3ELVhX+N4Q/IWyFbQQv7kqFizmNS3uGHNF4uIvC79cg==, tarball: https://npm.jsr.io/~/7/@jsr/usevue__core/0.1.0.tgz}
     dependencies:
       vue: 3.4.21(typescript@5.4.2)
     transitivePeerDependencies:
