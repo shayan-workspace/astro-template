@@ -9,6 +9,10 @@
     "build": "astro build",
     "preview": "astro preview",
     "format": "prettier --write .",
+    "add": "git add .",
+    "commit": "git commit -m",
+    "push": "git push -u origin",
+    "pull": "git pull origin",
     "svelteui": "echo '{\"aliases\":{\"components\":\"~/components/svelte\",\"utils\":\"~/lib/utils\"},\"style\":\"default\",\"tailwind\":{\"config\":\"tailwind.config.mjs\",\"css\":\"src/styles/globals.css\",\"baseColor\":\"slate\",\"cssVariables\":true},\"typescript\":true}' > components.json && pnpx shadcn-svelte add -yo",
     "vueui": "echo '{\"aliases\":{\"components\":\"~/components/vue\",\"utils\":\"~/lib/utils\"},\"style\":\"default\",\"tailwind\":{\"config\":\"tailwind.config.mjs\",\"css\":\"src/styles/globals.css\",\"baseColor\":\"slate\",\"cssVariables\":true},\"typescript\":true}' > components.json && pnpx shadcn-vue add -yo"
   },
