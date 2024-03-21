@@ -1,18 +1,18 @@
 <script setup lang="ts">
-  import { useStore } from "@usevue/core";
-  import { Sun, Moon } from "lucide-vue-next";
+import { useStore } from "@usevue/core";
+import { Moon, Sun } from "lucide-vue-next";
 
-  import { Button } from "~/components/vue/ui/button";
-  import {
-    DropdownMenu,
-    DropdownMenuTrigger,
-    DropdownMenuContent,
-    DropdownMenuItem,
-  } from "~/components/vue/ui/dropdown-menu";
+import { Button } from "~/components/vue/ui/button";
+import {
+	DropdownMenu,
+	DropdownMenuContent,
+	DropdownMenuItem,
+	DropdownMenuTrigger,
+} from "~/components/vue/ui/dropdown-menu";
 
-  import { themeStore } from "~/stores/theme-store";
+import { themeStore } from "~/stores/theme-store";
 
-  const theme = useStore(themeStore);
+const theme = useStore(themeStore);
 </script>
 
 <template>

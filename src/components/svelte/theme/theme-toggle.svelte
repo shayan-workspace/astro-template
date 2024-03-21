@@ -1,24 +1,24 @@
 <script lang="ts">
-  import { useStore } from "@usesvelte/core";
+import { useStore } from "@usesvelte/core";
+import { Moon, Sun } from "lucide-svelte";
 
-  import { Sun, Moon } from "lucide-svelte";
-  import { Button } from "~/components/svelte/ui/button";
+import { Button } from "~/components/svelte/ui/button";
 
-  import { themeStore, resolvedThemeStore } from "~/stores/theme-store";
+import { resolvedThemeStore, themeStore } from "~/stores/theme-store";
 
-  const theme = useStore(themeStore);
-  const resolvedTheme = useStore(resolvedThemeStore);
+const theme = useStore(themeStore);
+const resolvedTheme = useStore(resolvedThemeStore);
 
-  function toggleTheme() {
-    switch (resolvedTheme.value) {
-      case "dark":
-        theme.value = "light";
-        break;
-      case "light":
-        theme.value = "dark";
-        break;
-    }
-  }
+function toggleTheme() {
+	switch (resolvedTheme.value) {
+		case "dark":
+			theme.value = "light";
+			break;
+		case "light":
+			theme.value = "dark";
+			break;
+	}
+}
 </script>
 
 <Button on:click={toggleTheme} variant="outline" size="icon">

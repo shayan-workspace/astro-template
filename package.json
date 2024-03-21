@@ -1,55 +1,44 @@
 {
-  "name": "astro",
-  "description": "Astro + Svelte + Vue + Nanostores",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "check": "astro check",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
-    "format": "prettier --write .",
-    "add:all": "git add .",
-    "commit": "pnpm format && git commit -m",
-    "push": "git push -u origin",
-    "pull": "git pull origin",
-    "svelteui": "echo '{\"aliases\":{\"components\":\"~/components/svelte\",\"utils\":\"~/lib/utils\"},\"style\":\"default\",\"tailwind\":{\"config\":\"tailwind.config.mjs\",\"css\":\"src/styles/globals.css\",\"baseColor\":\"slate\",\"cssVariables\":true},\"typescript\":true}' > components.json && pnpx shadcn-svelte add -yo",
-    "vueui": "echo '{\"aliases\":{\"components\":\"~/components/vue\",\"utils\":\"~/lib/utils\"},\"style\":\"default\",\"tailwind\":{\"config\":\"tailwind.config.mjs\",\"css\":\"src/styles/globals.css\",\"baseColor\":\"slate\",\"cssVariables\":true},\"typescript\":true}' > components.json && pnpx shadcn-vue add -yo"
-  },
-  "dependencies": {
-    "@astrojs/check": "^0.5.9",
-    "@astrojs/svelte": "^5.2.0",
-    "@astrojs/tailwind": "^5.1.0",
-    "@astrojs/vue": "^4.0.9",
-    "@nanostores/persistent": "^0.10.1",
-    "@usesvelte/core": "npm:@jsr/usesvelte__core@^0.1.0",
-    "@usevue/core": "npm:@jsr/usevue__core@^0.1.0",
-    "astro": "^4.5.6",
-    "bits-ui": "^0.19.7",
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.1.0",
-    "lucide-svelte": "^0.358.0",
-    "lucide-vue-next": "^0.358.0",
-    "nanostores": "^0.10.0",
-    "radix-vue": "^1.5.3",
-    "svelte": "5.0.0-next.80",
-    "tailwind-merge": "^2.2.2",
-    "tailwind-variants": "^0.2.1",
-    "tailwindcss": "^3.4.1",
-    "tailwindcss-animate": "^1.0.7",
-    "typescript": "^5.4.2",
-    "vue": "3.4.0-alpha.4"
-  },
-  "devDependencies": {
-    "prettier": "^3.2.5",
-    "prettier-plugin-astro": "^0.13.0",
-    "prettier-plugin-svelte": "^3.2.2"
-  },
-  "prettier": {
-    "vueIndentScriptAndStyle": true,
-    "plugins": [
-      "prettier-plugin-astro",
-      "prettier-plugin-svelte"
-    ]
-  }
+	"name": "astro",
+	"description": "Astro + Svelte + Vue + Nanostores",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"check": "astro check",
+		"build": "astro check && astro build",
+		"preview": "astro preview",
+		"biome:check": "biome check .",
+		"biome:apply": "biome check --apply .",
+		"svelteui": "echo '{\"aliases\":{\"components\":\"~/components/svelte\",\"utils\":\"~/lib/utils\"},\"style\":\"default\",\"tailwind\":{\"config\":\"tailwind.config.mjs\",\"css\":\"src/styles/globals.css\",\"baseColor\":\"slate\",\"cssVariables\":true},\"typescript\":true}' > components.json && pnpx shadcn-svelte add -yo",
+		"vueui": "echo '{\"aliases\":{\"components\":\"~/components/vue\",\"utils\":\"~/lib/utils\"},\"style\":\"default\",\"tailwind\":{\"config\":\"tailwind.config.mjs\",\"css\":\"src/styles/globals.css\",\"baseColor\":\"slate\",\"cssVariables\":true},\"typescript\":true}' > components.json && pnpx shadcn-vue add -yo"
+	},
+	"dependencies": {
+		"@astrojs/check": "^0.5.9",
+		"@astrojs/svelte": "^5.2.0",
+		"@astrojs/tailwind": "^5.1.0",
+		"@astrojs/vue": "^4.0.9",
+		"@nanostores/persistent": "^0.10.1",
+		"@usesvelte/core": "npm:@jsr/usesvelte__core@^0.1.0",
+		"@usevue/core": "npm:@jsr/usevue__core@^0.1.0",
+		"astro": "^4.5.6",
+		"bits-ui": "^0.19.7",
+		"class-variance-authority": "^0.7.0",
+		"clsx": "^2.1.0",
+		"gsap": "^3.12.5",
+		"lucide-svelte": "^0.358.0",
+		"lucide-vue-next": "^0.358.0",
+		"nanostores": "^0.10.0",
+		"radix-vue": "^1.5.3",
+		"svelte": "5.0.0-next.80",
+		"tailwind-merge": "^2.2.2",
+		"tailwind-variants": "^0.2.1",
+		"tailwindcss": "^3.4.1",
+		"tailwindcss-animate": "^1.0.7",
+		"typescript": "^5.4.2",
+		"vue": "3.4.0-alpha.4"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.6.1"
+	}
 }

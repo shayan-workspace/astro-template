@@ -1,18 +1,18 @@
 <script lang="ts">
-  import { useStore } from "@usesvelte/core";
-  import { Sun, Moon } from "lucide-svelte";
+import { useStore } from "@usesvelte/core";
+import { Moon, Sun } from "lucide-svelte";
 
-  import { Button } from "~/components/svelte/ui/button";
-  import {
-    DropdownMenu,
-    DropdownMenuTrigger,
-    DropdownMenuContent,
-    DropdownMenuItem,
-  } from "~/components/svelte/ui/dropdown-menu";
+import { Button } from "~/components/svelte/ui/button";
+import {
+	DropdownMenu,
+	DropdownMenuContent,
+	DropdownMenuItem,
+	DropdownMenuTrigger,
+} from "~/components/svelte/ui/dropdown-menu";
 
-  import { themeStore } from "~/stores/theme-store";
+import { themeStore } from "~/stores/theme-store";
 
-  const theme = useStore(themeStore);
+const theme = useStore(themeStore);
 </script>
 
 <DropdownMenu>
@@ -28,20 +28,14 @@
     </Button>
   </DropdownMenuTrigger>
   <DropdownMenuContent align="end">
-    <DropdownMenuItem
-      on:click={() => {
-        theme.value = "light";
-      }}>Light</DropdownMenuItem
-    >
-    <DropdownMenuItem
-      on:click={() => {
-        theme.value = "dark";
-      }}>Dark</DropdownMenuItem
-    >
-    <DropdownMenuItem
-      on:click={() => {
-        theme.value = "system";
-      }}>System</DropdownMenuItem
-    >
+    <DropdownMenuItem on:click={() => { theme.value = "light"; }}>
+      Light
+    </DropdownMenuItem>
+    <DropdownMenuItem on:click={() => { theme.value = "dark"; }}>
+      Dark
+    </DropdownMenuItem>
+    <DropdownMenuItem on:click={() => { theme.value = "system"; }}>
+      System
+    </DropdownMenuItem>
   </DropdownMenuContent>
 </DropdownMenu>
